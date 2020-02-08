@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+    thymeleaf
+    <p th:each="var:${arrayList}" th:text="循环数据+${var}"></p>
+
+    <input type="checkbox" name="aa" th:checked="1==2"/>
+    <a th:href="'javascript:a(\''+${hello}+'\')'">aaa</a>
+
+</body>
+<script lang="JavaScript">
+    function a(hello) {
+        alert(hello);
+    }
+</script>
+</html>

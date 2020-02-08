@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.only.grain.manage.mapper.PmsSkuInfoMapper">
+
+    <select id="selectSkuSaleAttrValueListBySpu" resultMap="selectSkuSaleAttrValueListBySpu">
+        SELECT
+	        sku.id AS kid,skuv.id AS vid,sku.*,skuv.*
+        FROM
+            pms_sku_info sku,
+            pms_sku_sale_attr_value skuv
+        WHERE sku.id=skuv.sku_id
+        AND sku.product_id=#{productId}
+    </select>
+    <resultMap id="selectSkuSaleAttrValueListBySpu" type="com.only.grain.api.bean.PmsSkuInfo" autoMapping="true">
+        <result property="id" column="kid"/>
+        <collection property="skuSaleAttrValueList" ofType="com.only.grain.api.bean.PmsSkuSaleAttrValue" autoMapping="true">
+            <result property="id" column="vid"/>
+        </collection>
+    </resultMap>
+
+</mapper>

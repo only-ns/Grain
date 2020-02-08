@@ -1,7 +1,7 @@
 package com.only.grain.user.servier.Impl;
 
-import com.only.grain.bean.UmsMember;
-import com.only.grain.service.UmsMemberServer;
+import com.only.grain.api.bean.UmsMember;
+import com.only.grain.api.service.UmsMemberServer;
 import com.only.grain.user.mapper.UmsMemberMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

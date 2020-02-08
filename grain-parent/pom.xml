@@ -69,7 +69,7 @@
                 <version>${mybatis.version}</version>
             </dependency>
 
-
+            <!--三个thymeleaf的扩展包 热部署,松校验-->
             <dependency>
                 <groupId>net.sourceforge.nekohtml</groupId>
                 <artifactId>nekohtml</artifactId>
@@ -140,7 +140,6 @@
                 <artifactId>commons-beanutils</artifactId>
                 <version>${beanUtils.version}</version>
             </dependency>
-
 
         </dependencies>
     </dependencyManagement>
